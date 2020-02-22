@@ -1,4 +1,4 @@
-﻿# Local NetNTLMv2 Checker #
+# Local NetNTLMv2 Checker #
 
 __Summary__
 

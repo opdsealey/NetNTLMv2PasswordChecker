@@ -16,7 +16,7 @@ Console.WriteLine("SecREt01: " + checker.checkPassword("SecREt01")); // True
 
 ## NTLMv2 Response Message ##
 
-This primarily refereneces an excellent [article](http://davenport.sourceforge.net/ntlm.html#theLmv2Response) by Eric Glass on sourceforge and Microsoft's MSD NTML [documentation](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nlmp/b38c36ed-2804-4868-a9ff-8dd3182128e4). 
+This primarily refereneces an excellent [article](http://davenport.sourceforge.net/ntlm.html#theLmv2Response) by Eric Glass on sourceforge and Microsoft's MSD NTLM [documentation](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nlmp/b38c36ed-2804-4868-a9ff-8dd3182128e4). 
 Infomration here will touch on the netNTLMv2 Repsonse (Type 3) message. For a more complete understanding of the protocol please read the article and documentation. 
 
 __Overview__
@@ -25,7 +25,7 @@ __Overview__
 2. Unicode uppercase username is concatenated  with the domain or severname (this would normally be provided in the server response message - Type 2).
 3. The NTLMv2 Hash is calulated from the HMAC_MD5 of these values, using the NTLM hash (see 1.) as the key giving a 16-byte (128-bit) hash (_see [HMAC](https://en.wikipedia.org/wiki/HMAC#Design_principles) for more details on the difference between MD5_).
 4. The NTLMv2 hash is concatenated  with some _"random"_ data called the _blob_ (In this usecase we are not concerned with the structure of the _blob_ howerver, it is important in the protocol as it prevents attackers creating rainbow tables for precomputed passwords).
-5. The HMAC_MD5 is calulated of the NTLMv2 Hash and _blob_ resulting in the final NTLMv2 Response (this is what we see in a netNTLMv2 Response Message).
+5. The HMAC_MD5 is calulated from the NTLMv2 Hash and _blob_ resulting in the final NTLMv2 Response (this is what we see in a netNTLMv2 Response Message).
 
 ### netNTLMv2 ###
 

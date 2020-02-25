@@ -6,7 +6,6 @@ using System.Text;
 
 namespace NetNTLMv2Checker
 {
-   
     public class IMChecker
     {
         /* Designed to allow for checking a password locally against the output from Internal Monologue (netNTLMv2 Response) */

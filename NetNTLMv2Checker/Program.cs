@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------------
 # Name:         utils
-# Purpose:      Various utils required for verifying NTLMv2 hashes
+# Purpose:      Wrapper for checking hashes produced by Internal Monologue
 #
 # Author:      Oliver Sealey <github.com/opdsealey>
 #
